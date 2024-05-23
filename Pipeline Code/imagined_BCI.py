@@ -112,7 +112,7 @@ if len(sys.argv) != 2:
         sys.exit(1)
 
 
-model_script_path = "/home/ajh/trained_model (1).py"
+model_script_path = "/home/ajh/test_model.py"
 input_csv_file = sys.argv[1]
 
 output = str(label(model_script_path,input_csv_file))
