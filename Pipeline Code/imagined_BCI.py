@@ -113,11 +113,10 @@ if len(sys.argv) != 2:
 
 
 model_script_path = "/home/ajh/test_model.py"
-input_csv_file = sys.argv[1]
+csv_paths = sys.argv[1]
 
-output = str(label(model_script_path,input_csv_file))
+output = str(label(model_script_path, csv_paths))
 print(output)
-
 
     # Move forward
 if output == 'Up\n':
@@ -127,7 +126,6 @@ if output == 'Up\n':
 
     # Move Backward
 elif output == 'Down\n':
-        print('t')
         move_backward()
         sleep(1)
         stop()
@@ -144,7 +142,6 @@ elif output == 'Right\n':
        turn_right()
        sleep(0.5)
        stop()
-
 
     # Clean up GPIO
 GPIO.cleanup()
