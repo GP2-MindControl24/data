@@ -46,9 +46,9 @@ def model(input_csv):
     predictions = loaded_model.predict(X_test)
     predictions = statistics.mode(predictions.tolist())
     print(predictions)
+    
 
 if __name__ == "__main__":
     input_csv = sys.argv[1]
     m = model(input_csv)
-
     
