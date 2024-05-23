@@ -5,7 +5,6 @@ import pandas as pd
 import sys
 import json
 
-
 scaler = StandardScaler()
 
 
