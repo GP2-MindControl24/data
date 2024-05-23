@@ -22,7 +22,7 @@ def run_feature_extraction(script_path, input_file):
 
 def model(input_csv):
     # Load the trained model
-    loaded_model = load('/home/ajh/knn.joblib')
+    loaded_model = load('/home/ajh/knn_model.joblib')
 
     # Run feature extraction
     feature_script = '/home/ajh/feature_extraction.py'
