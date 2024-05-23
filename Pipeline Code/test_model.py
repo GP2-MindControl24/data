@@ -4,6 +4,7 @@ import numpy as np
 from joblib import load  # Adjusted import for joblib
 import json
 import sys
+import statistics
 
 def run_feature_extraction(script_path, input_file):
     # Run the feature extraction script and capture its output
@@ -43,7 +44,8 @@ def model(input_csv):
 
     # Make predictions
     predictions = loaded_model.predict(X_test)
-    print(predictions[1])
+    predictions = statistics.mode(predictions.tolist())
+    print(predictions)
 
 if __name__ == "__main__":
     input_csv = sys.argv[1]
